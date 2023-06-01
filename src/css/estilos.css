@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    background-color: #e5e5e5;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.acordeon{
+    width: 655px;
+    min-height: 347px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 27px 49px -25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+.acordeon .ilustracao{
+    position: absolute;
+    left: -90px;
+}
+
+.acordeon .conteudo{
+    width: 90%;
+    padding-left: 225px;
+    margin-top: 20px; /*CONFERIR ESTA ESTILIZAÇÃO*/
+}
+
+.acordeon .conteudo .titulo{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.acordeon .conteudo .perguntas{
+    cursor: pointer;
+    background-image: url(../images/dropdown-fechada.svg);
+    background-repeat: no-repeat;
+    background-position: top 22px right 0;
+    background-size: 12px;
+    padding-top: 15px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.acordeon .conteudo .perguntas:last-child{
+    border-bottom: none;
+}
+
+.acordeon .conteudo .perguntas .pergunta{
+    padding-bottom: 15px;
+    font-size: 1.6rem;
+    width: 90%;
+    font-weight: 500;
+    transition: .2s ease;
+}
+
+.conteudo .perguntas .pergunta:hover{
+    color: #f47c57;
+}
+
+.conteudo .perguntas .resposta{
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: none;
+    padding-bottom: 8px;
+}
+
+.conteudo .perguntas .resposta .mostrar{
+    display: block;
+    padding-bottom: 15px;
+}
+
+/* ESTILOS DE ITEM DE ACORDEON ATIVO */
+
+.acordeon .perguntas.ativo .pergunta{
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.acordeon .perguntas.ativo .resposta{
+    display: block;
+}
+
+.acordeon .perguntas.ativo{
+    background-image: url(../images/dropdown-aberta.svg);
+}
